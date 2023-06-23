@@ -2,6 +2,9 @@ import { motion } from "framer-motion";
 
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
+import { me } from "../assets"
+import { FaInstagram, FaGithub, FaTwitter, FaRegEnvelope } from 'react-icons/fa';
+
 
 const Hero = () => {
   return (
@@ -16,16 +19,28 @@ const Hero = () => {
 
         <div>
           <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm <span className='text-[#915EFF]'>Adrian</span>
+            Hi, I'm <span className='text-[#2ca30b]'>Safwan</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I develop 3D visuals, user <br className='sm:block hidden' />
-            interfaces and web applications
+            I make things sometimes. <br className='xs:block hidden' />
+            CCHS &lsquo;24
           </p>
+          <div className="pt-5 grid grid-flow-col gap-4 md:place-self-center md:justify-self-end">
+            <a target="_blank" rel="noopener noreferrer" href='https://www.instagram.com/safan25641/'><FaInstagram size={48} className="fill-slate-400 hover:fill-slate-500" /></a>
+            <a target="_blank" rel="noopener noreferrer" href='https://twitter.com/safan41'><FaTwitter size={48} className="fill-slate-400 hover:fill-slate-500" /></a>
+            <a target="_blank" rel="noopener noreferrer" href='mailto:safan25641@gmail.com'><FaRegEnvelope size={48} className="fill-slate-400 hover:fill-slate-500" /></a>
+            <a target="_blank" rel="noopener noreferrer" href='https://github.com/safan41'><FaGithub size={48} className="fill-slate-400 hover:fill-slate-500" /></a>
+          </div>
         </div>
+        
+        <img 
+          src={me}
+          alt="Photo of Me"
+          className="lg:w-72 lg:h-72 md:w-64 md:h-64 xs:w-32 xs:h-32 rounded-full" 
+          />  
       </div>
 
-      <ComputersCanvas />
+      {/* <ComputersCanvas /> */}
 
       <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
         <a href='#about'>
